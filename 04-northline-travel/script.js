@@ -4,7 +4,7 @@ const trips = [
     title: "Fjord Trail",
     climate: "Cool coast",
     price: 240,
-    image: "https://images.unsplash.com/photo-1500043357865-c6b8827edf39?auto=format&fit=crop&w=900&q=80"
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=80"
   },
   {
     key: "desert",
@@ -29,10 +29,11 @@ const travellers = document.querySelector("#travellers");
 const estimate = document.querySelector("#estimate");
 
 const setupImageFallbacks = () => {
+  const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const applyFallback = (image) => {
-    image.removeAttribute("src");
     image.alt = "";
     image.classList.add("image-fallback");
+    if (image.src !== transparentPixel) image.src = transparentPixel;
   };
 
   document.querySelectorAll("img:not([data-fallback-ready])").forEach((image) => {
@@ -43,8 +44,10 @@ const setupImageFallbacks = () => {
 };
 
 grid.innerHTML = trips.map((trip) => `
-  <article class="trip-card">
-    <img src="${trip.image}" alt="${trip.title} landscape">
+  <article class="trip-card" data-route="${trip.key}">
+    <div class="trip-media">
+      <img src="${trip.image}" alt="${trip.title} landscape">
+    </div>
     <div>
       <h3>${trip.title}</h3>
       <p>${trip.climate}. From <strong>$${trip.price}</strong> per person per night.</p>

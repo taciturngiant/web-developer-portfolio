@@ -49,10 +49,11 @@ const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector("#site-nav");
 
 const setupImageFallbacks = () => {
+  const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const applyFallback = (image) => {
-    image.removeAttribute("src");
     image.alt = "";
     image.classList.add("image-fallback");
+    if (image.src !== transparentPixel) image.src = transparentPixel;
   };
 
   document.querySelectorAll("img:not([data-fallback-ready])").forEach((image) => {

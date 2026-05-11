@@ -42,6 +42,7 @@ a { color: inherit; text-decoration: none; }
 }
 .sidebar a.active, .sidebar a:hover { background: #20313f; color: white; }
 main { padding: clamp(1rem, 3vw, 2.5rem); }
+.view[hidden] { display: none; }
 .dashboard-header {
   display: flex;
   align-items: end;
@@ -100,7 +101,7 @@ input, select {
   margin-bottom: 1rem;
 }
 .table-wrap { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; min-width: 680px; }
+table { width: 100%; border-collapse: collapse; min-width: 920px; }
 th, td {
   padding: .9rem .75rem;
   border-bottom: 1px solid var(--line);
@@ -117,6 +118,18 @@ tbody tr:hover { background: #f1f6f8; }
   font-size: .78rem;
   font-weight: 900;
 }
+.status {
+  display: inline-flex;
+  border-radius: 999px;
+  padding: .3rem .55rem;
+  background: #eef2f7;
+  color: #445160;
+  font-size: .78rem;
+  font-weight: 900;
+}
+.status.live { background: #e7f7ef; color: #12804f; }
+.status.paused { background: #fff4dc; color: #a86700; }
+.status.review { background: #fce8ef; color: #b73758; }
 .insights {
   display: grid;
   grid-template-columns: minmax(0, 1.3fr) minmax(280px, .7fr);

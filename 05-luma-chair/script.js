@@ -16,10 +16,11 @@ const delivery = document.querySelector("#delivery");
 const mainImage = document.querySelector("#main-image");
 
 const setupImageFallbacks = () => {
+  const transparentPixel = "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///ywAAAAAAQABAAACAUwAOw==";
   const applyFallback = (image) => {
-    image.removeAttribute("src");
     image.alt = "";
     image.classList.add("image-fallback");
+    if (image.src !== transparentPixel) image.src = transparentPixel;
   };
 
   document.querySelectorAll("img:not([data-fallback-ready])").forEach((image) => {
@@ -42,6 +43,7 @@ const render = () => {
   price.textContent = `$${total.toLocaleString("en-US")}`;
   summary.textContent = `${state.fabric} fabric, ${state.frame} frame, ${state.delivery} delivery. Total: $${total.toLocaleString("en-US")}.`;
   mainImage.classList.remove("image-fallback");
+  mainImage.alt = "Modern lounge chair in a bright room";
   mainImage.src = fabricImages[state.fabric];
 };
 

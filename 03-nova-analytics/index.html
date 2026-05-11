@@ -11,31 +11,31 @@
   <aside class="sidebar">
     <a class="brand" href="#">Nova</a>
     <nav aria-label="Dashboard navigation">
-      <a class="active" href="#overview">Overview</a>
-      <a href="#campaigns">Campaigns</a>
-      <a href="#insights">Insights</a>
+      <a class="active" href="#overview" data-view-link="overview">Overview</a>
+      <a href="#campaigns" data-view-link="campaigns">Campaigns</a>
+      <a href="#insights" data-view-link="insights">Insights</a>
     </nav>
   </aside>
 
   <main>
-    <header class="dashboard-header" id="overview">
+    <header class="dashboard-header">
       <div>
-        <p>marketing intelligence</p>
-        <h1>Campaign performance dashboard</h1>
+        <p id="dashboard-kicker">marketing intelligence</p>
+        <h1 id="dashboard-title">Campaign performance dashboard</h1>
       </div>
-      <label class="search">
+      <label class="search" id="search-control">
         <span>Search campaigns</span>
         <input id="search" type="search" placeholder="Try launch, email, brand">
       </label>
     </header>
 
-    <section class="metrics" aria-label="Key metrics">
+    <section id="overview" class="metrics view" aria-label="Key metrics" data-view="overview">
       <article><span>Total reach</span><strong id="reach">0</strong></article>
       <article><span>Conversions</span><strong id="conversions">0</strong></article>
       <article><span>Average ROI</span><strong id="roi">0%</strong></article>
     </section>
 
-    <section id="campaigns" class="panel">
+    <section id="campaigns" class="panel view" data-view="campaigns" hidden>
       <div class="panel-heading">
         <h2>Campaigns</h2>
         <select id="channel" aria-label="Filter by channel">
@@ -51,6 +51,8 @@
             <tr>
               <th>Campaign</th>
               <th>Channel</th>
+              <th>Status</th>
+              <th>Budget</th>
               <th>Reach</th>
               <th>Conv.</th>
               <th>ROI</th>
@@ -61,7 +63,7 @@
       </div>
     </section>
 
-    <section id="insights" class="insights">
+    <section id="insights" class="insights view" data-view="insights" hidden>
       <article class="visual">
         <div class="bars" id="bars" aria-label="ROI chart"></div>
       </article>
