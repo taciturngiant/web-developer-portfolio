@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive fitness studio website demo with vanilla JavaScript class planner.">
+  <title>Pulse Studio | Fitness Website Demo</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#top">Pulse Studio</a>
+    <nav aria-label="Main navigation">
+      <a href="#classes">Classes</a>
+      <a href="#trainers">Trainers</a>
+      <a href="#planner">Planner</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=1500&q=80" alt="Fitness class training in a modern studio">
+      <div class="hero-panel">
+        <p>responsive fitness website</p>
+        <h1>Book stronger weeks before Monday starts.</h1>
+        <a href="#planner">Build a weekly plan</a>
+      </div>
+    </section>
+
+    <section id="classes" class="section">
+      <div class="heading">
+        <p>class formats</p>
+        <h2>Training that fits real calendars.</h2>
+      </div>
+      <div class="class-grid">
+        <article>
+          <span>HIIT</span>
+          <h3>Velocity</h3>
+          <p>45 minutes of intervals, strength blocks and measurable progress.</p>
+        </article>
+        <article>
+          <span>Mobility</span>
+          <h3>Flow Reset</h3>
+          <p>Low-impact movement for recovery, posture and range of motion.</p>
+        </article>
+        <article>
+          <span>Strength</span>
+          <h3>Forge</h3>
+          <p>Small group coaching with progressive lifting and careful form.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="trainers" class="trainers section">
+      <img src="https://images.unsplash.com/photo-1571019613914-85f342c6a11e?auto=format&fit=crop&w=1000&q=80" alt="Personal trainer coaching a client with weights">
+      <div>
+        <p>coaching</p>
+        <h2>Clean booking flow, bold mobile layout.</h2>
+        <p>This portfolio piece demonstrates image-led art direction, CSS grid, responsive cards, accessible forms and ES6 array rendering.</p>
+      </div>
+    </section>
+
+    <section id="planner" class="planner section">
+      <div class="heading">
+        <p>weekly planner</p>
+        <h2>Choose your focus.</h2>
+      </div>
+      <div class="controls">
+        <button class="goal active" type="button" data-goal="strength">Strength</button>
+        <button class="goal" type="button" data-goal="conditioning">Conditioning</button>
+        <button class="goal" type="button" data-goal="recovery">Recovery</button>
+      </div>
+      <div id="plan" class="plan" aria-live="polite"></div>
+    </section>
+  </main>
+
+  <footer>Demo project: semantic HTML5, CSS3, ES6+ and responsive UI.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio hub with five responsive HTML5, CSS3 and JavaScript ES6+ website demos.">
+  <title>Frontend Portfolio Demos</title>
+  <style>
+    :root {
+      --ink: #17191c;
+      --paper: #f5f6f2;
+      --panel: #ffffff;
+      --muted: #62666b;
+      --line: #dfe3df;
+      --teal: #137f78;
+      --coral: #c85d42;
+      --blue: #385f90;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    main { padding: clamp(1rem, 4vw, 4rem); }
+    header {
+      min-height: 42vh;
+      display: grid;
+      align-content: end;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--line);
+    }
+    p, h1, h2 { overflow-wrap: anywhere; }
+    .eyebrow {
+      margin: 0 0 .7rem;
+      color: var(--teal);
+      font-size: .76rem;
+      font-weight: 900;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+    }
+    h1 {
+      max-width: 11ch;
+      margin: 0;
+      font-size: clamp(3rem, 8vw, 7rem);
+      line-height: .98;
+    }
+    header p:last-child { max-width: 62ch; color: var(--muted); font-size: 1.1rem; }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 1rem;
+      padding-top: 1rem;
+    }
+    a {
+      min-height: 260px;
+      display: grid;
+      align-content: space-between;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 1rem;
+      background: var(--panel);
+      color: inherit;
+      text-decoration: none;
+      box-shadow: 0 14px 36px rgba(23, 25, 28, .07);
+    }
+    a:hover { border-color: var(--teal); transform: translateY(-2px); }
+    h2 { margin: 0; font-size: 1.35rem; line-height: 1.08; }
+    .tag { color: var(--coral); font-weight: 950; }
+    .meta { color: var(--muted); }
+    @media (max-width: 1050px) { .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+    @media (max-width: 620px) { .grid { grid-template-columns: 1fr; } a { min-height: 190px; } }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">portfolio demos</p>
+      <h1>Five responsive frontend projects.</h1>
+      <p>Standalone HTML5, CSS3 and vanilla JavaScript ES6+ projects prepared for a web developer proposal.</p>
+    </header>
+    <section class="grid" aria-label="Portfolio projects">
+      <a href="01-atelier-cafe/index.html">
+        <span class="tag">01</span>
+        <h2>Atelier Cafe</h2>
+        <span class="meta">Restaurant landing page</span>
+      </a>
+      <a href="02-pulse-studio/index.html">
+        <span class="tag">02</span>
+        <h2>Pulse Studio</h2>
+        <span class="meta">Fitness website</span>
+      </a>
+      <a href="03-nova-analytics/index.html">
+        <span class="tag">03</span>
+        <h2>Nova Analytics</h2>
+        <span class="meta">SaaS dashboard</span>
+      </a>
+      <a href="04-northline-travel/index.html">
+        <span class="tag">04</span>
+        <h2>Northline Travel</h2>
+        <span class="meta">Travel landing page</span>
+      </a>
+      <a href="05-luma-chair/index.html">
+        <span class="tag">05</span>
+        <h2>Luma Chair</h2>
+        <span class="meta">Ecommerce product page</span>
+      </a>
+    </section>
+  </main>
+</body>
+</html>

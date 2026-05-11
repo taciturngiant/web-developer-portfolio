@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive restaurant landing page demo built with semantic HTML5, CSS3 and vanilla JavaScript ES6+.">
+  <title>Atelier Cafe | Responsive Restaurant Website</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Atelier Cafe home">Atelier Cafe</a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" class="site-nav" aria-label="Primary navigation">
+      <a href="#menu">Menu</a>
+      <a href="#events">Events</a>
+      <a href="#booking">Booking</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="eyebrow">seasonal dining / slow coffee / private tables</p>
+        <h1>Small plates, serious coffee, warm evenings.</h1>
+        <p>Atelier Cafe is a fictional restaurant website demo focused on responsive layout, polished typography and conversion-friendly booking flows.</p>
+        <a class="button" href="#booking">Reserve a table</a>
+      </div>
+      <picture>
+        <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80" alt="Sunlit cafe table with coffee and pastries">
+      </picture>
+    </section>
+
+    <section class="section intro" aria-label="Restaurant highlights">
+      <article>
+        <span>01</span>
+        <h2>Responsive Design</h2>
+        <p>Fluid grid, flexible image ratios and mobile-first navigation.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h2>Semantic HTML5</h2>
+        <p>Accessible sections, labels, cards and form structure.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h2>JavaScript ES6+</h2>
+        <p>Filterable menu, booking summary and interactive controls.</p>
+      </article>
+    </section>
+
+    <section id="menu" class="section">
+      <div class="section-heading">
+        <p class="eyebrow">menu</p>
+        <h2>Today at the counter</h2>
+      </div>
+      <div class="filters" role="group" aria-label="Filter menu">
+        <button class="filter is-active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="brunch">Brunch</button>
+        <button class="filter" type="button" data-filter="coffee">Coffee</button>
+        <button class="filter" type="button" data-filter="evening">Evening</button>
+      </div>
+      <div class="menu-grid" id="menu-grid"></div>
+    </section>
+
+    <section id="events" class="split section">
+      <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1000&q=80" alt="People dining together in a relaxed restaurant">
+      <div>
+        <p class="eyebrow">private events</p>
+        <h2>Designed for small gatherings.</h2>
+        <p>Use this section in a portfolio to demonstrate art direction, brand-led layout decisions and well-spaced responsive content blocks.</p>
+        <ul class="check-list">
+          <li>Corporate breakfasts</li>
+          <li>Weekend tastings</li>
+          <li>Private supper clubs</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="booking" class="booking section">
+      <div class="section-heading">
+        <p class="eyebrow">booking</p>
+        <h2>Reserve your table</h2>
+      </div>
+      <form class="booking-form">
+        <label>
+          Guests
+          <input id="guests" type="number" min="1" max="12" value="2">
+        </label>
+        <label>
+          Date
+          <input id="date" type="date">
+        </label>
+        <label>
+          Seating
+          <select id="seating">
+            <option value="Window table">Window table</option>
+            <option value="Garden room">Garden room</option>
+            <option value="Chef counter">Chef counter</option>
+          </select>
+        </label>
+        <output id="booking-summary" aria-live="polite"></output>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>Demo project: HTML5 / CSS3 / JavaScript ES6+ / Responsive Design</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

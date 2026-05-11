@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive ecommerce product page demo with JavaScript configurator.">
+  <title>Luma Chair | Ecommerce Product Demo</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#top">Luma</a>
+    <nav aria-label="Product navigation">
+      <a href="#details">Details</a>
+      <a href="#configure">Configure</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="product-hero">
+      <div class="gallery">
+        <img id="main-image" src="https://images.unsplash.com/photo-1506439773649-6e0eb8cfb237?auto=format&fit=crop&w=1200&q=80" alt="Modern lounge chair in a bright room">
+      </div>
+      <div class="buy-panel">
+        <p>modular lounge chair</p>
+        <h1>Luma Chair</h1>
+        <p class="lede">A fictional ecommerce product page built to show product storytelling, responsive layout and interactive JavaScript configuration.</p>
+        <div class="price" id="price">$840</div>
+        <a class="button" href="#configure">Configure</a>
+      </div>
+    </section>
+
+    <section id="details" class="section details">
+      <article>
+        <span>01</span>
+        <h2>Responsive product media</h2>
+        <p>Stable image ratios keep the layout composed across phones, tablets and desktop screens.</p>
+      </article>
+      <article>
+        <span>02</span>
+        <h2>Accessible form controls</h2>
+        <p>Color, material and delivery choices use real labels, buttons and live price updates.</p>
+      </article>
+      <article>
+        <span>03</span>
+        <h2>Vanilla ES6 logic</h2>
+        <p>Configuration state is stored in one object and rendered without external libraries.</p>
+      </article>
+    </section>
+
+    <section id="configure" class="configure section">
+      <div>
+        <p>customizer</p>
+        <h2>Build the chair.</h2>
+      </div>
+      <form class="config-form">
+        <fieldset>
+          <legend>Fabric</legend>
+          <button class="swatch active" type="button" data-fabric="linen" data-price="0">Linen</button>
+          <button class="swatch" type="button" data-fabric="moss" data-price="70">Moss</button>
+          <button class="swatch" type="button" data-fabric="charcoal" data-price="90">Charcoal</button>
+        </fieldset>
+        <label>
+          Frame
+          <select id="frame">
+            <option value="Oak" data-price="0">Oak</option>
+            <option value="Walnut" data-price="120">Walnut</option>
+            <option value="Black steel" data-price="80">Black steel</option>
+          </select>
+        </label>
+        <label>
+          Delivery
+          <select id="delivery">
+            <option value="Standard" data-price="0">Standard</option>
+            <option value="Room setup" data-price="95">Room setup</option>
+          </select>
+        </label>
+        <output id="summary" aria-live="polite"></output>
+      </form>
+    </section>
+
+    <section id="reviews" class="reviews section">
+      <div class="heading">
+        <p>reviews</p>
+        <h2>Social proof layout.</h2>
+      </div>
+      <div class="review-grid">
+        <blockquote>Sharp product page. The mobile version feels intentional and the configurator is easy to scan.</blockquote>
+        <blockquote>Good typography, strong image use and clear purchase path without relying on a framework.</blockquote>
+      </div>
+    </section>
+  </main>
+
+  <footer>Demo project: HTML5 / CSS3 / JavaScript ES6+ / Responsive Design.</footer>
+  <script src="script.js"></script>
+</body>
+</html>

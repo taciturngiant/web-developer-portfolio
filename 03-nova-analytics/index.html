@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Responsive SaaS analytics dashboard demo built with HTML5, CSS3 and JavaScript ES6+.">
+  <title>Nova Analytics | SaaS Dashboard Demo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <a class="brand" href="#">Nova</a>
+    <nav aria-label="Dashboard navigation">
+      <a class="active" href="#overview">Overview</a>
+      <a href="#campaigns">Campaigns</a>
+      <a href="#insights">Insights</a>
+    </nav>
+  </aside>
+
+  <main>
+    <header class="dashboard-header" id="overview">
+      <div>
+        <p>marketing intelligence</p>
+        <h1>Campaign performance dashboard</h1>
+      </div>
+      <label class="search">
+        <span>Search campaigns</span>
+        <input id="search" type="search" placeholder="Try launch, email, brand">
+      </label>
+    </header>
+
+    <section class="metrics" aria-label="Key metrics">
+      <article><span>Total reach</span><strong id="reach">0</strong></article>
+      <article><span>Conversions</span><strong id="conversions">0</strong></article>
+      <article><span>Average ROI</span><strong id="roi">0%</strong></article>
+    </section>
+
+    <section id="campaigns" class="panel">
+      <div class="panel-heading">
+        <h2>Campaigns</h2>
+        <select id="channel" aria-label="Filter by channel">
+          <option value="all">All channels</option>
+          <option value="Search">Search</option>
+          <option value="Social">Social</option>
+          <option value="Email">Email</option>
+        </select>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Campaign</th>
+              <th>Channel</th>
+              <th>Reach</th>
+              <th>Conv.</th>
+              <th>ROI</th>
+            </tr>
+          </thead>
+          <tbody id="campaign-table"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="insights" class="insights">
+      <article class="visual">
+        <div class="bars" id="bars" aria-label="ROI chart"></div>
+      </article>
+      <article class="panel">
+        <h2>Why this project fits the brief</h2>
+        <p>It demonstrates responsive UI composition, data rendering with ES6 methods, form controls, table design and dashboard information hierarchy.</p>
+      </article>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
